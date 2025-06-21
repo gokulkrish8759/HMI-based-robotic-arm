@@ -1,2 +1,10 @@
 # HMI-based-robotic-arm
-A gesture-controlled 6-DOF robotic arm powered by a Human-Machine Interface glove embedded with flex sensors and IMUs. It captures real-time hand movements and transmits data wirelessly via Bluetooth to an Arduino-based system that drives precise robotic motion. Designed for intuitive control, remote operation, and human-robot interaction.
+A gesture-controlled 6-DOF robotic arm powered by a Human-Machine Interface glove embedded with flex sensors and IMUs. It captures real-time hand movements and transmits data wirelessly via Bluetooth to an Arduino-based system that drives precise robotic motion. The main objective is to provide an intuitive and wireless control interface that bridges human gestures with robotic actuation, enabling applications in remote operation, rehabilitation, assistive technologies, and human-robot interaction.
+
+The control interface is a custom-built wearable glove embedded with five flex sensors to detect individual finger bending and an MPU-6050 Inertial Measurement Unit (IMU) to capture the orientation and motion of the user's hand. An Arduino Uno processes the sensor data on the glove side and transmits it wirelessly using an HC-05 Bluetooth module to a second Arduino Uno that controls the robotic arm.
+
+The robotic arm, equipped with six servo motors corresponding to base rotation, shoulder, elbow, wrist pitch, wrist roll, and gripper, replicates the user’s hand movements in real time. Sensor data is mapped to servo angles using threshold logic and interpolation techniques, enabling smooth and accurate motion.
+
+A dedicated power supply ensures stable servo actuation. This system is designed for applications in remote operation in hazardous environments, assistive technology for individuals with physical impairments, robotics education, and human-robot interaction research. Key features include real-time wireless communication, sensor fusion for gesture accuracy, and intuitive, low-latency control.
+
+Future enhancements include implementing inverse kinematics for Cartesian control, integrating PID algorithms for smoother motion, upgrading to ESP32 for onboard processing, and expanding compatibility with the Robot Operating System (ROS). Overall, the project bridges human gestures and robotic manipulation through a low-cost, scalable, and responsive interface.
